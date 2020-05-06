@@ -1,6 +1,7 @@
 package patrones.factorymethod.ejemplo1;
 
 import java.util.Scanner;
+// Aplicacion Cliente que hace uso de la estructura del patron
 
 public class Client {
     static Scanner entrada = new Scanner(System.in); 
