@@ -12,6 +12,23 @@ class Cliente {
         }else{
             System.out.println("Son diferentes");
         }
+        // Crear una copia de un objeto
+        Capitan capitan3;
+        capitan3 = capitan1;
+        if (capitan1==capitan3){
+            System.out.println("Es el mismo capitan1 y capitan3");
+        }else{
+            System.out.println("Son diferentes");
+        }
+        // Thread
+//        Capitan.CapitanDerivado capitan4 = 
+//                capitan1.new CapitanDerivado();
+//
+//        if (capitan1==capitan4){
+//            System.out.println("Es el mismo capitan1 y capitan3");
+//        }else{
+//            System.out.println("Son diferentes");
+//        }
     }
     
 }

@@ -1,12 +1,12 @@
 package patrones.singleton.ejemplo1;
 // Clase debe Singleton
-class Capitan {
+final class Capitan {
     // declarar una única instancia de esta clase
     private static Capitan instance;   
     // constructor sea privado
     private Capitan(){}
     // Método para recuperar una única instancia
-    public static Capitan getInstance(){
+    public synchronized static Capitan getInstance(){
         // Inicilización peresoza
         if (instance==null){
             instance = new Capitan();
@@ -18,5 +18,9 @@ class Capitan {
         return instance;
     }
     
+    // Crear una clase anidada
+//    class CapitanDerivado extends Capitan{
+//        
+//    }
     
 }
