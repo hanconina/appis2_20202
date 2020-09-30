@@ -6,7 +6,7 @@ public class HotelDecorador {
         
         Habitacion hab1 = new Color(new HabitacionSimple());
         Habitacion hab2 = new Alfombra(new Color(new TV(new HabitacionSimple())));
-        
+        Habitacion hab3 = new Alfombra(new TV(new HabitacionSimple()));
         System.out.println(hab1.mostrarHabitacion());
         System.out.println(hab2.mostrarHabitacion());
     }
