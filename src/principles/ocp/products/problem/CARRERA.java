@@ -1,4 +1,4 @@
-package principles.ocp.products;
+package principles.ocp.products.problem;
 
 public enum CARRERA {
     IS, II, IC

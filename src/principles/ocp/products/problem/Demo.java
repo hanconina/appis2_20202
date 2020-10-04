@@ -1,4 +1,4 @@
-package principles.ocp.products;
+package principles.ocp.products.problem;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package principles.ocp.products;
+package principles.ocp.products.solution;
 
 public class Alumno {
     private String nombres;
