@@ -1,8 +1,6 @@
 
 package patrones.strategy.ejemplo1;
 
-import static patrones.strategy.ejemplo1.OperationCompraWeb.comision;
-
 public class OperationCompraPresencial implements Strategy {
    
     static float comision = (float) 0.07;

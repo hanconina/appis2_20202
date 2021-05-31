@@ -5,11 +5,11 @@ package patrones.command.ejemplo1;
 
 public class OrdenCopiar implements Orden{
 
-    private DocumentoEditor documento; // Establece un enlace entre el objeto receptor y una accion
+    private Pantalla documento; // Establece un enlace entre el objeto receptor y una accion
     private String estadoAnterior;
     private int inicio, fin;
 
-    public OrdenCopiar(DocumentoEditor documento, int inicio, int fin) {
+    public OrdenCopiar(Pantalla documento, int inicio, int fin) {
         this.documento = documento;
         this.estadoAnterior = documento.toString(); //Al crear la orden, guarda el valor actual de la pantalla
         this.inicio = inicio;

@@ -11,11 +11,11 @@ package patrones.command.ejemplo1;
  */
 public class Cliente extends javax.swing.JFrame {
 
-    public DocumentoEditor documento = new DocumentoEditor("");
-    public ElementoPantalla elemento = new ElementoPantalla();
-    public Orden oCortar;
-    public Orden oCopiar;
-    public Orden oPegar;
+    public Pantalla pantalla = new Pantalla(""); // Receptor
+    public Invocador invocador = new Invocador(); // Invocador
+    public Orden oCortar; // Orden concreta
+    public Orden oCopiar; // Orden concreta
+    public Orden oPegar; // Orden concreta
     
     public Cliente() {
         initComponents();
@@ -147,34 +147,34 @@ public class Cliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCopiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCopiarActionPerformed
-        documento.setTexto(jTextArea1.getText());
-        oCopiar = new OrdenCopiar(documento,Integer.parseInt(txtInicio.getText()),Integer.parseInt(txtFin.getText()));
+        pantalla.setTexto(jTextArea1.getText());
+        oCopiar = new OrdenCopiar(pantalla,Integer.parseInt(txtInicio.getText()),Integer.parseInt(txtFin.getText()));
       
-        elemento.ejecutar(oCopiar);
+        invocador.ejecutar(oCopiar);
         
     }//GEN-LAST:event_btnCopiarActionPerformed
 
     private void btnCortarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCortarActionPerformed
-        documento.setTexto(jTextArea1.getText());
-        oCortar = new OrdenCortar(documento,Integer.parseInt(txtInicio.getText()),Integer.parseInt(txtFin.getText()));
+        pantalla.setTexto(jTextArea1.getText());
+        oCortar = new OrdenCortar(pantalla,Integer.parseInt(txtInicio.getText()),Integer.parseInt(txtFin.getText()));
        
-        elemento.ejecutar(oCortar);
-        jTextArea1.setText(documento.toString());
+        invocador.ejecutar(oCortar);
+        jTextArea1.setText(pantalla.toString());
     }//GEN-LAST:event_btnCortarActionPerformed
 
     private void btnPegarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPegarActionPerformed
-        documento.setTexto(jTextArea1.getText());
-        oPegar = new OrdenPegar(documento,jTextArea1.getText().length());
+        pantalla.setTexto(jTextArea1.getText());
+        oPegar = new OrdenPegar(pantalla,jTextArea1.getText().length());
         
         
         
-        elemento.ejecutar(oPegar);
-        jTextArea1.setText(documento.toString());
+        invocador.ejecutar(oPegar);
+        jTextArea1.setText(pantalla.toString());
     }//GEN-LAST:event_btnPegarActionPerformed
 
     private void btnDeshacerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeshacerActionPerformed
-       elemento.deshacerOrden();
-       jTextArea1.setText(documento.toString());
+       invocador.deshacerOrden();
+       jTextArea1.setText(pantalla.toString());
     }//GEN-LAST:event_btnDeshacerActionPerformed
 
     private void btnRehacerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRehacerActionPerformed

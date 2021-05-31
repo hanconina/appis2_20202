@@ -3,11 +3,11 @@ package patrones.command.ejemplo1;
 
 
 public class OrdenPegar implements Orden{
-    private DocumentoEditor documento;
+    private Pantalla documento;
     private String estadoAnterior;
     private int posicion; //indica a partir de qué posición pegar lo del portapapeles
 
-    public OrdenPegar(DocumentoEditor documento, int posicion) {
+    public OrdenPegar(Pantalla documento, int posicion) {
         this.documento = documento;
         this.estadoAnterior = documento.toString();
         this.posicion = posicion;

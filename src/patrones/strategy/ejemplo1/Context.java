@@ -11,6 +11,5 @@ public class Context {
 
     public float executeStrategy(int monto, float descuento) {
         return strategy.doOperation(monto, descuento);
-    }
-    
+    }    
 }
